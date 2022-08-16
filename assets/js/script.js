@@ -1,4 +1,15 @@
 
+/* -------------------------- Meal Planning Manager --------------------------- */
+// mealSaveData is the string containing a date and what the user p, ex "Apple and a pear"
+$("#mealDateSelector").change(function() {
+    var selectedDate = $("#mealDateSelector").val()
+    if(localStorage.selectedDate) {
+        $("#mealItems").val(localStorage.selectedDate);
+    } else {
+        $("#mealItems").val("Nothing yet. . .")
+    }
+});
+
 // searchIngredients accepts a string of ingredients in plain english, i.e. "A can of beans an 16 ounces of coffee" or "coffee and a croissant" and nutritional information via the edamam API such as Calories, fat, alcohol, etc. Example call: searchIngredients("Pasta and sauce");
 function searchIngredients(ingredients) {
     $.ajax({

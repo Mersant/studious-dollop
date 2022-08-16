@@ -41,7 +41,9 @@
             <label for="mealDate">I want to plan a meal for:</label>
             <input type="date" id="mealDateSelector" name="mealDate"><br>
             <label for="foods">I'm going to eat:</label>
+            <button id="saveMealPlan">Save this meal</button>
             <input type="text" name="foods" id="mealItems"><br>
+            <button id="clearAllMealPlans">Clear all meal plans</button><br>
             <span id="nutritionTitle">Nutrition info for these foods:</span>
             <div id="nutritionInfo" class="infoContainer">
                 <!-- ULs will be added via js, these are placeholders for CSS styling-->
@@ -78,6 +80,8 @@
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
 
