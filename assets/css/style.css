@@ -1,0 +1,41 @@
+:root {
+    --Primary: #353535;
+    --secondary: #BCBCBC;
+}
+
+header {
+    font-size: 60px;
+    color: #353535;
+}
+
+.sidenav {
+    height: 100%;
+    width: 500px;
+    position: fixed;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.sidenav a, .createTodo-btn {
+    padding: 6px 8px 6px 20px;
+    font-size: 30px;
+    color: var(--Primary);
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+.sidenav a:hover {
+    color: white;
+}
+
+.main {
+    margin-left: 150px;
+    padding: 0px 500px;
+}
