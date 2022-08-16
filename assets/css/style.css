@@ -2,10 +2,18 @@
     --Primary: #353535;
     --secondary: #BCBCBC;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98af4323706a1033c4c1c4878003753ddf7c3337
 header {
     font-size: 60px;
     color: #353535;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98af4323706a1033c4c1c4878003753ddf7c3337
 .sidenav {
     height: 100%;
     width: 500px;
@@ -13,6 +21,10 @@ header {
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98af4323706a1033c4c1c4878003753ddf7c3337
 .sidenav a, .createTodo-btn {
     padding: 6px 8px 6px 20px;
     font-size: 30px;
@@ -25,9 +37,19 @@ header {
     cursor: pointer;
     outline: none;
 }
+<<<<<<< HEAD
 .sidenav a:hover {
     color: white;
 }
+=======
+
+
+
+.sidenav a:hover {
+    color: white;
+}
+
+>>>>>>> 98af4323706a1033c4c1c4878003753ddf7c3337
 .main {
     margin-left: 150px;
     padding: 0px 500px;
