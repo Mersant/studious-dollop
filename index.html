@@ -44,15 +44,21 @@
             <label for="foods">I'm going to eat:</label>
             <button id="saveMealPlan">Save this meal</button>
             <input type="text" name="foods" id="mealItems" placeholder="Enter what you want to eat"><br>
-            <label for="meal">I'm going to eat this for:</label>
-            <button id="breakfastBtn">Breakfast</button>
-            <button id="lunchBtn">Lunch</button>
-            <button id="dinnerBtn">Dinner</button><br>
+            I'm going to eat this for:
+            <input type="radio" id="breakfastRadio" name="currentMeal" value="breakfast" checked="checked">
+            <label for="breakfastRadio">Breakfast</label>
+            <input type="radio" id="lunchRadio" name="currentMeal" value="lunch">
+            <label for="lunchRadio">Lunch</label>
+            <input type="radio" id="dinnerRadio" name="currentMeal" value="dinner">
+            <label for="dinnerRadio">Dinner</label><br>
             <button id="clearAllMealPlans">Clear all meal plans</button><br>
             <span id="nutritionTitle">Nutrition info for these foods:</span>
             <div id="nutritionInfo" class="infoContainer">
                 <!-- ULs will be added via js, these are placeholders for CSS styling-->
                 Select a date to get started!
+                <div id="breakfastNutrition"></div>
+                <div id="lunchNutrition"></div>
+                <div id="dinnerNutrition"></div>
             </div>
         </div>
     </div>
