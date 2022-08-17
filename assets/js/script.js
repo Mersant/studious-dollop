@@ -56,3 +56,8 @@ function updateNutrition(ingredients) {
         }
     })
 }
+
+
+$("#createTodo-btn").on('click', function() { 
+    console.log("clicked")
+$("#createTodoOptions").css('display', 'block')})
