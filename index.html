@@ -41,43 +41,22 @@
             <label for="mealDate">I want to plan a meal for:</label>
             <input type="date" id="mealDateSelector" name="mealDate"><br>
             <label for="foods">I'm going to eat:</label>
-            <input type="text" name="foods" id="mealItems"><br>
+            <button id="saveMealPlan">Save this meal</button>
+            <input type="text" name="foods" id="mealItems" placeholder="Enter what you want to eat"><br>
+            <label for="meal">I'm going to eat this for:</label>
+            <button id="breakfastBtn">Breakfast</button>
+            <button id="lunchBtn">Lunch</button>
+            <button id="dinnerBtn">Dinner</button><br>
+            <button id="clearAllMealPlans">Clear all meal plans</button><br>
             <span id="nutritionTitle">Nutrition info for these foods:</span>
             <div id="nutritionInfo" class="infoContainer">
                 <!-- ULs will be added via js, these are placeholders for CSS styling-->
-                <ul>
-                    <li>Apple</li>
-                    <li>Quantity: 2</li>
-                    <li>Calories: 100,000</li>
-                    <li>Fat: 620g</li>
-                    <li>Protein: 0g</li>
-                    <li>Carbohydrates: 100g</li>
-                    <li>Cholesterol: 60g</li>
-                    <li>Added sugar: 5000g</li>
-                </ul>
-                <ul>
-                    <li>Apple</li>
-                    <li>Quantity: 2</li>
-                    <li>Calories: 100,000</li>
-                    <li>Fat: 620g</li>
-                    <li>Protein: 0g</li>
-                    <li>Carbohydrates: 100g</li>
-                    <li>Cholesterol: 60g</li>
-                    <li>Added sugar: 5000g</li>
-                </ul>
-                <ul>
-                    <li>Apple</li>
-                    <li>Quantity: 2</li>
-                    <li>Calories: 100,000</li>
-                    <li>Fat: 620g</li>
-                    <li>Protein: 0g</li>
-                    <li>Carbohydrates: 100g</li>
-                    <li>Cholesterol: 60g</li>
-                    <li>Added sugar: 5000g</li>
-                </ul>
+                Select a date to get started!
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
 
