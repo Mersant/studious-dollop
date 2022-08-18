@@ -4,6 +4,7 @@ body {
     font-style: "Roboto", "sans-serif";
 }
 
+/* header */
 header {
     background-color: #112441;
     color: white;
@@ -15,6 +16,28 @@ header {
     border-color: white;
 }
 
+/* main area of the page */
 .main {
     text-align: center;
+}
+
+/* meal planner div */
+#mealPlanner {
+    font-size: 20px;
+    line-height: 2;
+    color: #112441;
+    border-radius: 20px 20px;
+    background-color: #78888D;
+    padding: 10px 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+li{
+    font-size: 20px;
 }
