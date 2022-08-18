@@ -1,8 +1,10 @@
+
 body {
     background-color: #F6EDDD;
     color: #112441;
-    font-style: "Roboto", "sans-serif";
+    font-family: "Roboto", sans-serif;
 }
+
 
 header {
     background-color: #112441;
