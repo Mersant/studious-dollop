@@ -1,14 +1,13 @@
 
 body {
     background-color: #F6EDDD;
-    color: #112441;
+    color: #F6EDDD;
     font-family: "Roboto", sans-serif;
 }
 
 
 header {
     background-color: #112441;
-    color: white;
     text-align: center;
     padding: 40px;
     font-size: 300%;
@@ -25,12 +24,9 @@ header {
 h1{
     font-weight: bolder;
     font-size: 37pt;
-    color: white;
 
 }
 #mealPlanner {
-  display: table;
-  align-self: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -46,7 +42,6 @@ h2 {
     margin-left: 200px;
     margin-right: 200px;
     background-color: #112441;
-    color: white;
     font-size: 20px;
     border-radius: 30px 30px;
 }
@@ -117,12 +112,10 @@ button:hover:after{
 h2{
     font-size: 24pt;
     font-weight: bold;
-    color: #112441;
   }
 
 li {
     font-size: 16pt;
-    color: #112441;
 }
 
 #foodName {
