@@ -92,6 +92,31 @@ h1 {
 }
 
 .main {
-    margin-left: 150px;
-    padding: 0px 500px;
+    padding: 0px 0px;
 }
+
+#mealPlanner {
+    justify-content: center;
+    text-align: center;
+    color: var(--Primary);
+    margin-left: 100px;
+}
+
+
+
+
+
+h2 {
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1;
+    color: var(--Primary);
+    background-color: var(--secondary);
+    padding: 60px 50px;
+    top: 0px;
+    bottom: 0px;
+    margin: 0 auto;
+}
+
