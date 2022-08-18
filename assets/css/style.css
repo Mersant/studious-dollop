@@ -74,4 +74,7 @@ h2{
 li {
     font-size: 16pt;
     color: #112441;
+
+#foodName {
+    font-weight: 700;
 }
