@@ -82,12 +82,20 @@ button:hover:after{
 h2{
     font-size: 24pt;
     font-weight: bold;
+
     color: white;
+
+    color: #F6EDDD;
+
   }
 
 li {
     font-size: 16pt;
+
     color: white;
+
+    color: #F6EDDD;
+
 }
 #foodName {
     font-weight: 700;
