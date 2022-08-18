@@ -1,3 +1,15 @@
+/* --------------------------- Page Manager ----------------------------------- */
+$("#mealPlanner").css("display", "none");
+$("#generalTodo").css("display", "none");
+$("#makeTodoListButton").click(function() {
+    $("#mealPlanner").css("display", "none");
+    $("#generalTodo").css("display", "block");
+});
+$("#planMealButton").click(function() {
+    $("#mealPlanner").css("display", "block");
+    $("#generalTodo").css("display", "none");
+});
+
 
 /* -------------------------- Meal Planning Manager --------------------------- */
 // Every time a date is selected on the calender, update the nutritional information for any food that was saved for that date.
