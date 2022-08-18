@@ -1,122 +1,20 @@
-:root {
-    --Primary: #353535;
-    --secondary: #BCBCBC;
+body {
+    background-color: #F6EDDD;
+    color: #112441;
+    font-style: "Roboto", "sans-serif";
 }
-
 
 header {
-    font-size: 60px;
-    color: #353535;
-}
-
-
-.sidenav {
-    height: 100%;
-    width: 500px;
-    position: fixed;
-    background-image: linear-gradient( 135deg, #EE9AE5 10%, #5961F9 100%);
-}
-
-/* create to do btn */
- .createTodo-btn {
-    padding: 0px 0px 0px 25px;
-    font-size: 20px;
-    color: var(--Primary);
-    display: block;
-    background: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-    margin-top: 70px;
-    border: 2px solid var(--Primary);
-    border-radius: 40px 40px;
-}
-
-.createTodo-btn:hover {
-    background-color: var(--secondary);
-}
-
-/* create to do category img */
-img {
-    padding: 0px 25px;
-    float: right;
-}
-
-
-h1 {
-    text-align: left;
-    line-height: 5;
-    font-weight: bold;
-    font-size: 40px;
-    color: var(--Primary);
-    padding: 10px 80px;
-}
-
-.about-border {
-    display: block;
-    width: 200px;
-    height: 7px;
-    background-color: var(--Primary);
-    margin: -60px 80px;
-    border-radius: 20px;
-}
-
-
-#todoListContainer {
-    padding: 60px;
-}
-
-
-#createTodoOptions {
-    margin-top: 10px;
-    margin-left: 10px;
-    border-bottom: 2px solid var(--Primary);
-    /* display: none; */
-}
-
-#todoListName {
-    background: none;
-    border: 1px solid var(--Primary);
-    border-radius: 5px 5px;
-    margin: 10px 10px;
-}
-
-#confirmCreateTodo-btn {
-    margin: 0px 0px;
-    padding: 5px 5px;
-    background-color: #353535;
-    border: 2px solid var(--Primary);
-    border-radius: 5px 5px;
+    background-color: #112441;
     color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 300%;
+    border-style: solid;
+    border-bottom-width: 20px;
+    border-color: white;
 }
 
 .main {
-    padding: 0px 0px;
-}
-
-#mealPlanner {
-    justify-content: center;
     text-align: center;
-    color: var(--Primary);
-    margin-left: 100px;
 }
-
-
-
-
-
-h2 {
-    justify-content: center;
-    font-size: 30px;
-    text-align: center;
-    font-weight: bold;
-    line-height: 1;
-    color: var(--Primary);
-    background-color: var(--secondary);
-    padding: 60px 50px;
-    top: 0px;
-    bottom: 0px;
-    margin: 0 auto;
-}
-
