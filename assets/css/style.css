@@ -29,6 +29,41 @@ h1{
 
 }
 
+#mealPlanner {
+    line-height: 2;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: #112441;
+    color: white;
+    font-size: 20px;
+    border-radius: 30px 30px;
+}
+
+#mealDateSelector {
+    width: 150px;
+    height: 30px;
+    background-color: #FF8A33;
+    border-radius: 10px 10px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#mealDateSelector:hover {
+    padding-right: 25px;
+}
+
+#mealDateSelector:hover::after {
+    opacity: 1;
+    right: 0;
+}
+
+#mealDateSelector::after {
+    content: \00bb;
+    position: absolute;
+    transition: 0.5s;
+}
 
 button{
     display: inline-block;
@@ -77,6 +112,7 @@ li {
     font-size: 16pt;
     color: #112441;
 }
+
 #foodName {
     font-weight: 700;
 }
