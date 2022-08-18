@@ -34,7 +34,8 @@ h2 {
   padding: 10px;
 }
 
-#mealPlanner {
+.mainContentContainer {
+  animation: fadeIn 1s;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
@@ -45,6 +46,10 @@ h2 {
   background-color: #112441;
   font-size: 20px;
   border-radius: 30px 30px;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 #mealDateSelector {
