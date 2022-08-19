@@ -12,6 +12,12 @@ $("#planMealButton").click(function() {
 
 
 /* -------------------------- Meal Planning Manager --------------------------- */
+var saveNamesList
+if(!localStorage.getItem("saveNamesList")) {
+    saveNamesList = [];
+} else {
+    saveNamesList = JSON.parse(localStorage.getItem("saveNamesList")); 
+}
 // Every time a date is selected on the calender, update the nutritional information for any food that was saved for that date.
 $("#mealDateSelector").change(function() {
     var selectedDate = $("#mealDateSelector").val();
@@ -28,6 +34,8 @@ $("#saveMealPlan").click( function() {
         var currentMeal = $("input[name='currentMeal']:checked").val();
         var saveName = `${currentMeal}-${selectedDate}`;
         localStorage.setItem(saveName, mealItems);
+        saveNamesList.push(saveName);
+        localStorage.setItem("saveNamesList", JSON.stringify(saveNamesList))
         updateNutrition( selectedDate );
         $("#saveMealPlan").html("Saved!");
         $("#mealItems").val("");
@@ -51,7 +59,12 @@ $("#clearAllMealPlans").click( function() {
         timeOut = setTimeout(updateClearButton, 1000); // Interruptable timeout
     }
     else {
-        localStorage.clear()
+        saveNamesList = JSON.parse(localStorage.getItem("saveNamesList")); 
+        for(i=0; i<saveNamesList.length; i++) {
+            localStorage.removeItem(saveNamesList[i]);
+        }
+        saveNamesList = [];
+        localStorage.setItem("saveNamesList", saveNamesList);
         $("#clearAllMealPlans").html("Cleared!");
         // Clearing the timout prevents the "Cleared!" message from being cleared almost immediately by the updateClearButton() function
         clearTimeout(timeOut);
