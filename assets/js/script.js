@@ -243,10 +243,6 @@ updateTaskList();
 //On click of the submit button this function calls the addTask function to execute its role
 addItemButton.addEventListener("click", function() {
     addTask();
-    // Lis
-    var list = localStorage.getItem("allTasks")
-
-
 }, false);
 
 
