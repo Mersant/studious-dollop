@@ -153,7 +153,9 @@ function getWeather(city){
           return response.json();
         })
         .then(function (data) {
+
             console.log(data)
+
             var temp = `${data.list[0].main.temp}°F`
             var cityTemp = `Temprature ${data.list[0].main.temp}°F`;
             var feelsLike = `Feels like ${data.list[0].main.feels_like}°F`;
@@ -163,9 +165,15 @@ function getWeather(city){
             var cityName = `City ${data.city.name}`;
             var countryName = `Country ${data.city.country}`;
             var population = `Population ${data.city.population}`
+
             var weather = `${data.list[0].weather[0].main}`;
             var weatherConditions = ["clear sky", "few clouds", "scattered clouds", "broken clouds", "shower rain", "rain", "thunderstorm", "snow", "mist"]
             var weatherConditionsCode = ["01d", "02d", "03d", "04d", "09d", "10d", "11d", "13d", "50d"]
+
+            var weather = `Weather ${data.list[0].weather[0].main}`;
+            var weatherData = [cityName, countryName, population, weather, cityTemp, tempMin, tempMax, humidity, feelsLike]
+
+
             $("#weather").html("");
             var grand = document.querySelector("#grand")
             grand.innerHTML = temp
@@ -256,3 +264,8 @@ clearList.addEventListener("click", function(){
 //---------------------------------------------------------------------------------------------------------------
 
 getLocationInfo()
+
+            
+
+
+
