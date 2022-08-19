@@ -255,6 +255,7 @@ function addTask() {
 
     
 };
+addTask();
 //On click of the submit button this function calls the addTask function to execute its role
 addItemButton.addEventListener("click", function() {
     addTask();
@@ -268,7 +269,8 @@ addItemButton.addEventListener("click", function() {
 
 //Clears the list by clearing local storage
 clearList.addEventListener("click", function(){
-    localStorage.clear()
+    localStorage.removeItem("allTasks");
+    localStorage.removeItem("task");
     window.location.reload();
 })
 
