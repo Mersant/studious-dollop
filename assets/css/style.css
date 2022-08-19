@@ -1,56 +1,130 @@
-:root {
-    --Primary: #353535;
-    --secondary: #BCBCBC;
-}
-<<<<<<< HEAD
-=======
 
->>>>>>> 98af4323706a1033c4c1c4878003753ddf7c3337
+body {
+    background-color: #F6EDDD;
+    color: #F6EDDD;
+    font-family: "Roboto", sans-serif;
+}
+
+
 header {
-    font-size: 60px;
-    color: #353535;
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> 98af4323706a1033c4c1c4878003753ddf7c3337
-.sidenav {
-    height: 100%;
-    width: 500px;
-    position: fixed;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> 98af4323706a1033c4c1c4878003753ddf7c3337
-.sidenav a, .createTodo-btn {
-    padding: 6px 8px 6px 20px;
-    font-size: 30px;
-    color: var(--Primary);
-    display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-}
-<<<<<<< HEAD
-.sidenav a:hover {
-    color: white;
-}
-=======
-
-
-
-.sidenav a:hover {
-    color: white;
+    background-color: #112441;
+    text-align: center;
+    padding: 40px;
+    font-size: 300%;
+    border-style: solid;
+    border-bottom-width: 20px;
+    border-color: white;
 }
 
->>>>>>> 98af4323706a1033c4c1c4878003753ddf7c3337
 .main {
-    margin-left: 150px;
-    padding: 0px 500px;
+    text-align: center;
+}
+
+
+h1{
+    font-weight: bolder;
+    font-size: 37pt;
+
+}
+
+h2 {
+  border-bottom-width: 5px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #FF8A33;
+  padding: 10px;
+}
+
+.mainContentContainer {
+  animation: fadeIn 1s;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  margin: 30px;
+  line-height: 2;
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: #112441;
+  font-size: 20px;
+  border-radius: 30px 30px;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#mealDateSelector {
+    width: 150px;
+    height: 30px;
+    background-color: #FF8A33;
+    border-radius: 10px 10px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#mealDateSelector:hover {
+    padding-right: 25px;
+}
+
+#mealDateSelector:hover::after {
+    opacity: 1;
+    right: 0;
+}
+
+#mealDateSelector::after {
+    content: \00bb;
+    position: absolute;
+    transition: 0.5s;
+}
+
+button{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #FF8A33;
+    border: none;
+    color: #112441;
+    text-align: center;
+    font-size: 19px;
+    padding: 5px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+button:after{
+    content: \00bb;
+    position: absolute;
+    transition: 0.5s;
+  }
+
+button:hover {
+    padding-right: 25px;
+  }
+  
+button:hover:after{
+    opacity: 1;
+    right: 0;
+  }
+
+h2{
+    font-size: 24pt;
+    font-weight: bold;
+  }
+
+li {
+    font-size: 16pt;
+}
+
+#foodName {
+    font-weight: 700;
 }
