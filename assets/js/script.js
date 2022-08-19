@@ -126,39 +126,16 @@ function fetchAndDisplayNutrition(ingredients, appendID) {
 }
 
 //---------------------------------------Weather------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Gets the clients location info
-function getLocationInfo(lat, lon){
-    var requestUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=02024b9f7001696a944662ca0b291629`
-    fetch(requestUrl)
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-            cityName = data[0].name;
-            getWeather(cityName)
-        })
-}
 //Api used to show location
-function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } 
-  }
-  //Api used to get the lat and long of the client
-function showPosition(position) {
-    var lat = position.coords.latitude 
-    console.log(lat)
-    var lon = position.coords.longitude
-    console.log(lon)
-    getLocationInfo(lat, lon)
-  }
 
-  console.log(getLocation())
-
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(getWeather);
+} 
 //Gets the weather data of the city passed in by the function
-function getWeather(city){
-
-    var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&exclude=hourly,daily&appid=02024b9f7001696a944662ca0b291629&units=imperial&cnt=1`
+function getWeather(position){
+    var lat = position.coords.latitude 
+    var lon = position.coords.longitude
+    var requestUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&exclude=hourly,daily&appid=02024b9f7001696a944662ca0b291629&units=imperial&cnt=1`
 
 
         fetch(requestUrl)
@@ -166,8 +143,6 @@ function getWeather(city){
           return response.json();
         })
         .then(function (data) {
-
-            console.log(data)
 
             var temp = `${data.list[0].main.temp}°F`
             var cityTemp = `Temprature ${data.list[0].main.temp}°F`;
@@ -214,7 +189,6 @@ function getWeather(city){
             for(let i = 0; i < weatherConditions.length; i++){
                 if(weatherConditions[i] === weatherDescription){
                     var weatherIcon = document.querySelector("#wIcon")
-                    console.log(weatherConditionsCode[i])
                     weatherIcon.src = `http://openweathermap.org/img/wn/${weatherConditionsCode[i]}@2x.png`
                 }
             }
@@ -229,41 +203,46 @@ function icons(){
 //-----------------------------------------ToDoList-------------------------------------------------------------
 var taskInput = document.querySelector("#task");
 var addItemButton = document.querySelector("#addItemButton");
-var taskList = document.querySelector("#toDoList")
-var clearList = document.querySelector("#clearList")
-var iterator = 0
+var taskList = document.querySelector("#toDoList");
+var clearList = document.querySelector("#clearList");
 //Function for adding tasks to the list 
 function addTask() {
     // Parse the JSON stored in allTasks
-    var existingTasks = JSON.parse(localStorage.getItem("allTasks"));
-    if(existingTasks == null) existingTasks = [];
-    //JSON object for task
-    var task = {
-        taskInput : taskInput.value
-    };
-    localStorage.setItem("task", JSON.stringify(task));
-    // Save allEntries back to local storage
-    existingTasks.push(task);
-    localStorage.setItem("allTasks", JSON.stringify(existingTasks));
-    //Loop through the items and append the task inserted
-    for(const task in existingTasks){
-        var taskItem = document.createElement('li')
-        console.log(existingTasks[task].taskInput)
-        taskList.append(existingTasks[iterator].taskInput, taskItem)
-        iterator++;
+    var savedTaskList;
+    if(JSON.parse(localStorage.getItem("allTasks"))) {
+        savedTaskList = JSON.parse(localStorage.getItem("allTasks"));
+    } else {
+        savedTaskList = [];
     }
 
-    
+    if(taskInput.value == "") return;
+    var task = taskInput.value;
+
+    savedTaskList.push(task);
+    // Save allEntries back to local storage
+    localStorage.setItem("allTasks", JSON.stringify(savedTaskList));
+    //Loop through the items and append the task inserted
+    updateTaskList();
 };
-addTask();
+
+function updateTaskList() {
+    $("#toDoList").html("");
+    var savedTaskList;
+    if(localStorage.getItem("allTasks")) {
+        savedTaskList = JSON.parse(localStorage.getItem("allTasks"));
+    } else {
+        return;
+    }
+    for(var i=0; i<savedTaskList.length; i++){
+        var taskItem = document.createElement('li');
+        taskList.append(savedTaskList[i], taskItem)
+    }
+}
+updateTaskList();
+
 //On click of the submit button this function calls the addTask function to execute its role
 addItemButton.addEventListener("click", function() {
     addTask();
-    // Lis
-    var list = localStorage.getItem("allTasks")
-
-    // Last entry inserted
-
 }, false);
 
 
@@ -271,14 +250,10 @@ addItemButton.addEventListener("click", function() {
 clearList.addEventListener("click", function(){
     localStorage.removeItem("allTasks");
     localStorage.removeItem("task");
-    window.location.reload();
+    $("#toDoList").html("");
 })
 
 
-
-//---------------------------------------------------------------------------------------------------------------
-
-getLocationInfo()
 
             
 
