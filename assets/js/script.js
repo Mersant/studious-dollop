@@ -128,7 +128,7 @@ function fetchAndDisplayNutrition(ingredients, appendID) {
 //---------------------------------------Weather------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Gets the clients location info
 function getLocationInfo(lat, lon){
-    var requestUrl = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=02024b9f7001696a944662ca0b291629`
+    var requestUrl = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=02024b9f7001696a944662ca0b291629`
     fetch(requestUrl)
         .then(function (response) {
           return response.json();
