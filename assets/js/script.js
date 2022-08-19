@@ -233,7 +233,7 @@ function updateTaskList() {
     } else {
         return;
     }
-    for(i=0; i<savedTaskList.length; i++){
+    for(var i=0; i<savedTaskList.length; i++){
         var taskItem = document.createElement('li');
         taskList.append(savedTaskList[i], taskItem)
     }
@@ -246,7 +246,6 @@ addItemButton.addEventListener("click", function() {
     // Lis
     var list = localStorage.getItem("allTasks")
 
-    // Last entry inserted
 
 }, false);
 
