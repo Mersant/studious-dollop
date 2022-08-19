@@ -29,6 +29,7 @@ h1{
 
 h2 {
   border-bottom-width: 5px;
+  border-radius: 5px;
   border-style: solid;
   border-color: #FF8A33;
   padding: 10px;
